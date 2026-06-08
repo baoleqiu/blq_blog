@@ -35,6 +35,17 @@ hexo.extend.injector.register('head_end', `<style>
   object-fit: cover !important;
 }
 
+/* 内容区域半透明背景 */
+#content-inner,
+.layout_post,
+.recent-post-item,
+.card-widget {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border-radius: 12px !important;
+}
+
 /* 灯箱窗口化 */
 .fancybox__backdrop {
   background: rgba(0, 0, 0, 0.6) !important;
