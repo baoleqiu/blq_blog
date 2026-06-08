@@ -270,7 +270,7 @@ aside:
   button: true
   mobile: true
   # Position: left / right
-  position: left
+  position: right
   display:
     archive: true
     tag: true
@@ -284,7 +284,7 @@ aside:
       text: Follow Me
       link: https://github.com/baoleqiu
   card_announcement:
-    enable: true
+    enable: false
     content: 欢迎来到玻璃球的博客 🎉
   card_recent_post:
     enable: true
