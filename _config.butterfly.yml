@@ -152,13 +152,12 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: true
+  enable: false
   # Typewriter Effect
   effect: true
   typed_option:
   source: false
   sub:
-    - 记录学习与生活的点滴
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
