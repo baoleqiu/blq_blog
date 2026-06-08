@@ -36,11 +36,23 @@ hexo.extend.injector.register('head_end', `<style>
 }
 
 /* 内容区域半透明背景 */
+body {
+  background: transparent !important;
+}
+
+#body-wrap,
+.layout,
 #content-inner,
-.layout_post,
+#recent-posts,
+#post,
+#page,
+#content {
+  background: transparent !important;
+}
+
 .recent-post-item,
 .card-widget {
-  background: rgba(255, 255, 255, 0.7) !important;
+  background: rgba(255, 255, 255, 0.65) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
   border-radius: 12px !important;
