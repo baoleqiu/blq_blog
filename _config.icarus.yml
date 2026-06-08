@@ -1,0 +1,51 @@
+version: 5.1.0
+variant: default
+
+# 三栏布局：左侧个人资料 + 中间文章 + 右侧组件
+widgets:
+  # 左侧栏 - 个人资料
+  - position: left
+    type: profile
+    author: blq
+    author_title: 善良耙耙柑 🍊
+    avatar: https://avatars.githubusercontent.com/baoleqiu
+    avatar_rounded: true
+    follow_link: https://github.com/baoleqiu
+    social_links:
+      GitHub:
+        icon: fab fa-github
+        url: https://github.com/baoleqiu
+
+  # 右侧栏
+  - position: right
+    type: recent_posts
+
+  - position: right
+    type: archives
+
+  - position: right
+    type: categories
+
+  - position: right
+    type: tags
+
+logo:
+  text: 玻璃球
+
+navbar:
+  menu:
+    Home: /
+    Archives: /archives
+    Categories: /categories
+    Tags: /tags
+
+footer:
+  since: 2026
+
+article:
+  licenses: false
+
+providers:
+  cdn: jsdelivr
+  fontcdn: google
+  iconcdn: fontawesome
