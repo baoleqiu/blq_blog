@@ -37,8 +37,7 @@ hexo.extend.injector.register('head_end', `<style>
 
 /* 内容区域半透明背景 */
 body {
-  background: linear-gradient(135deg, #fdf6f0 0%, #f5ebe0 30%, #faf5f0 60%, #f0e8db 100%) !important;
-  background-attachment: fixed !important;
+  background: transparent !important;
 }
 
 #body-wrap,
