@@ -50,18 +50,6 @@ hexo.extend.injector.register('head_end', `<style>
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
   background: transparent !important;
 }
-
-/* 灯箱工具栏：隐藏放大、缩小、1:1、逆时针旋转 */
-.fancybox__toolbar button[title="Zoom in"],
-.fancybox__toolbar button[title="放大"],
-.fancybox__toolbar button[title="Zoom out"],
-.fancybox__toolbar button[title="缩小"],
-.fancybox__toolbar button[title="Toggle zoom"],
-.fancybox__toolbar button[title="1 : 1"],
-.fancybox__toolbar button[title="Rotate counterclockwise"],
-.fancybox__toolbar button[title="逆时针旋转"] {
-  display: none !important;
-}
 </style>`);
 
 hexo.extend.injector.register('body_end', `<script>
@@ -75,5 +63,15 @@ hexo.extend.injector.register('body_end', `<script>
     });
   });
   observer.observe(document.body, { childList: true, subtree: true });
+
+  // 灯箱工具栏：隐藏放大、缩小、1:1、逆时针旋转
+  var hideButtons = ['zoomIn', 'zoomOut', 'toggle1to1', 'rotateCCW'];
+  var toolbarObserver = new MutationObserver(function() {
+    hideButtons.forEach(function(action) {
+      var btn = document.querySelector('.fancybox__toolbar button[data-fancybox-action="' + action + '"]');
+      if (btn) btn.style.display = 'none';
+    });
+  });
+  toolbarObserver.observe(document.body, { childList: true, subtree: true });
 })();
 </script>`);
