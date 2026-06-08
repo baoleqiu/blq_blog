@@ -35,26 +35,20 @@ hexo.extend.injector.register('head_end', `<style>
   object-fit: cover !important;
 }
 
-/* 灯箱窗口化 - 不占满全屏 */
-.fancybox__container {
-  --fancybox-bg: rgba(0, 0, 0, 0.7);
-  --fancybox-padding: 40px;
+/* 灯箱窗口化 */
+.fancybox__backdrop {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.fancybox__slide {
+  padding: 40px !important;
 }
 
 .fancybox__content {
-  max-width: 75vw !important;
-  max-height: 80vh !important;
   border-radius: 12px !important;
   overflow: hidden !important;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
-}
-
-.fancybox__content img {
-  max-width: 75vw !important;
-  max-height: 80vh !important;
-  width: auto !important;
-  height: auto !important;
-  object-fit: contain !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+  background: transparent !important;
 }
 </style>`);
 
@@ -69,13 +63,5 @@ hexo.extend.injector.register('body_end', `<script>
     });
   });
   observer.observe(document.body, { childList: true, subtree: true });
-
-  // Fancybox 窗口化配置
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof Fancybox !== 'undefined') {
-      Fancybox.defaults.tpl.main = '<div class="fancybox__container" role="dialog" aria-modal="true" aria-label="图片预览" tabindex="-1"><div class="fancybox__backdrop"></div><div class="fancybox__carousel"></div><div class="fancybox__footer"></div></div>';
-      Fancybox.defaults.Images.zoom = false;
-    }
-  });
 })();
 </script>`);
