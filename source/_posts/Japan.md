@@ -1,6 +1,6 @@
 ---
 title: Japan
-date: 2024-07
+date: 2024-07-12
 tags:
 cover: /img/kyoto.JPG
 ---
