@@ -1,18 +1,8 @@
-\---
-
+---
 title: Japan
-
-date: 2024-07
-
+date: 2024-07-01
 tags:
+cover: /img/kyoto.JPG
+---
 
-cover: /img/kyoto.jpg
-
-\---
-
-
-
-!\[京都河边](/img/kyoto.jpg)
-
-
-
+![京都河边](/img/kyoto.JPG)
