@@ -50,6 +50,18 @@ hexo.extend.injector.register('head_end', `<style>
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
   background: transparent !important;
 }
+
+/* 灯箱工具栏：隐藏放大、缩小、1:1、逆时针旋转 */
+.fancybox__toolbar button[title="Zoom in"],
+.fancybox__toolbar button[title="放大"],
+.fancybox__toolbar button[title="Zoom out"],
+.fancybox__toolbar button[title="缩小"],
+.fancybox__toolbar button[title="Toggle zoom"],
+.fancybox__toolbar button[title="1 : 1"],
+.fancybox__toolbar button[title="Rotate counterclockwise"],
+.fancybox__toolbar button[title="逆时针旋转"] {
+  display: none !important;
+}
 </style>`);
 
 hexo.extend.injector.register('body_end', `<script>
