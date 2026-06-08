@@ -5,8 +5,10 @@ tags:
 cover: /img/kyoto.JPG
 ---
 
-![坐1](/img/夕阳东京塔.jpg)
+![东京大学](/img/夕阳东京塔.jpg)
 
-![坐1](/img/罗森富士山.jpg)
+![东京塔](/img/夕阳东京塔.jpg)
 
-![京都河边](/img/kyoto.JPG)
+![富士山](/img/罗森富士山.jpg)
+
+![鸭川](/img/kyoto.JPG)
