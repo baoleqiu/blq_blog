@@ -1,0 +1,46 @@
+version: 5.1.0
+variant: default
+
+# 左侧栏: 头像/个人信息  中间: 文章  右侧栏: 日历/归档/标签
+widgets:
+  # 左侧栏 - 个人资料
+  - position: left
+    type: profile
+    author: blq
+    author_title: 记录学习与生活的点滴
+    avatar: https://avatars.githubusercontent.com/baoleqiu
+    avatar_rounded: true
+    follow_link: https://github.com/baoleqiu
+    social_links:
+      GitHub:
+        icon: fab fa-github
+        url: https://github.com/baoleqiu
+
+  # 右侧栏
+  - position: right
+    type: recent_posts
+
+  - position: right
+    type: archives
+
+  - position: right
+    type: categories
+
+  - position: right
+    type: tags
+
+logo:
+  text: 玻璃球
+
+navbar:
+  menu:
+    Home: /
+    Archives: /archives
+    Categories: /categories
+    Tags: /tags
+
+footer:
+  since: 2026
+
+article:
+  licenses: false
