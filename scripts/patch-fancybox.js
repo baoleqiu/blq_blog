@@ -7,11 +7,9 @@ hexo.extend.filter.register('after_generate', function() {
 
   let content = fs.readFileSync(file, 'utf-8');
 
-  // 从工具栏中移除: zoomIn, zoomOut, toggle1to1, rotateCCW
-  content = content.replace(
-    /'\s*zoomIn\s*',\s*'\s*zoomOut\s*',\s*'\s*toggle1to1\s*',\s*'\s*rotateCCW\s*',/g,
-    ''
-  );
+  // 移除: zoomIn, zoomOut, toggle1to1, rotateCCW（两个版本分支都需要处理）
+  const target = "'zoomIn','zoomOut','toggle1to1','rotateCCW',";
+  content = content.replaceAll(target, '');
 
   fs.writeFileSync(file, content);
 });
