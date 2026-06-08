@@ -6,7 +6,7 @@ hexo.extend.generator.register('auto-gallery', function (locals) {
     const imgRegex = /!\[.*?\]\((\/img\/.+?)\)/g;
     let match;
     const images = [];
-    while ((match = imgRegex.exec(post.content)) !== null) {
+    while ((match = imgRegex.exec(post._content)) !== null) {
       images.push(match[1]);
     }
 
