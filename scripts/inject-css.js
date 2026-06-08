@@ -37,7 +37,12 @@ hexo.extend.injector.register('head_end', `<style>
 
 /* 页脚透明 */
 #footer,
-.footer {
+#footer-wrap,
+#footer *,
+.footer-other,
+.footer-copyright,
+.footer-separator,
+[class*="footer"] {
   background: transparent !important;
 }
 
