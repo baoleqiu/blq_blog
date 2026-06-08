@@ -35,6 +35,11 @@ hexo.extend.injector.register('head_end', `<style>
   object-fit: cover !important;
 }
 
+/* 页脚透明 */
+#footer {
+  background: transparent !important;
+}
+
 /* 灯箱窗口化 */
 .fancybox__backdrop {
   background: rgba(0, 0, 0, 0.6) !important;
