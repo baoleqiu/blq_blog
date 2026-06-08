@@ -1,10 +1,6 @@
-const fs = require('fs');
-const path = require('path');
+hexo.extend.generator.register('auto-gallery', function (locals) {
+  const posts = locals.posts.sort('date', -1);
 
-hexo.on('generateBefore', function () {
-  const posts = hexo.locals.get('posts').sort('date', -1);
-
-  // 按年月分组
   const groups = {};
   posts.forEach(post => {
     const imgRegex = /!\[.*?\]\((\/img\/.+?)\)/g;
@@ -26,25 +22,29 @@ hexo.on('generateBefore', function () {
     });
   });
 
-  // 生成 markdown
-  let md = `---
-title: 相册
-date: 2026-06-08 17:22:24
-type: photos
----
-
-`;
-
+  let html = '';
   Object.keys(groups).sort().reverse().forEach(month => {
-    md += `## ${month}\n\n{% gallery %}\n`;
+    html += `<h2 id="${month}">${month}</h2>\n`;
+    html += '<div class="gallery">\n';
     groups[month].forEach(img => {
-      md += `![${img.title}](${img.url})\n`;
+      html += `<div class="gallery-item">\n`;
+      html += `  <a href="${img.url}" data-fancybox="gallery" data-caption="${img.title}">\n`;
+      html += `    <img src="${img.url}" alt="${img.title}" loading="lazy">\n`;
+      html += `  </a>\n`;
+      html += `</div>\n`;
     });
-    md += '{% endgallery %}\n\n';
+    html += '</div>\n';
   });
 
-  // 写入 source/photos/index.md
-  const dir = path.join(hexo.base_dir, 'source', 'photos');
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.md'), md);
+  if (!html) html = '<p>还没有照片，去写一篇带图片的文章吧 📸</p>';
+
+  return {
+    path: 'photos/index.html',
+    data: {
+      title: '相册',
+      date: '2026-06-08 17:22:24',
+      content: html
+    },
+    layout: ['page', 'post']
+  };
 });
