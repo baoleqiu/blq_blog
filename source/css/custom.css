@@ -1,0 +1,11 @@
+/* 文章卡片半透明 + 毛玻璃效果 */
+#recent-posts .recent-post-item,
+.layout_post .post-block,
+.layout_page .page-block,
+.card-widget,
+#aside_content .card-widget {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px !important;
+}
