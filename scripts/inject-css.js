@@ -35,8 +35,11 @@ hexo.extend.injector.register('head_end', `<style>
   object-fit: cover !important;
 }
 
-/* 内容区域全透明 */
-body,
+/* 淡蓝色背景 */
+body {
+  background: #e8f0f8 !important;
+}
+
 #body-wrap,
 .layout,
 #content-inner,
