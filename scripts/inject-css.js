@@ -35,6 +35,12 @@ hexo.extend.injector.register('head_end', `<style>
   object-fit: cover !important;
 }
 
+/* 页脚透明 */
+#footer,
+.footer {
+  background: transparent !important;
+}
+
 /* 淡蓝色背景 */
 body {
   background: #e8f0f8 !important;
