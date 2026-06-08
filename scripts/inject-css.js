@@ -50,30 +50,7 @@ hexo.extend.injector.register('head_end', `<style>
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
   background: transparent !important;
 }
-</style>
-
-<script>
-// 在 Fancybox 初始化前修改默认配置
-(function() {
-  var check = setInterval(function() {
-    if (typeof Fancybox !== 'undefined' && Fancybox.defaults) {
-      clearInterval(check);
-      // 覆盖工具栏配置，移除指定按钮
-      if (!Fancybox.defaults._customized) {
-        var orig = Fancybox.defaults.Carousel || {};
-        orig.Toolbar = orig.Toolbar || {};
-        orig.Toolbar.display = {
-          left: ['counter'],
-          middle: ['rotateCW', 'flipX', 'flipY', 'reset'],
-          right: ['autoplay', 'thumbs', 'close']
-        };
-        Fancybox.defaults.Carousel = orig;
-        Fancybox.defaults._customized = true;
-      }
-    }
-  }, 50);
-})();
-</script>`);
+</style>`);
 
 hexo.extend.injector.register('body_end', `<script>
 (function() {
