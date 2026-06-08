@@ -5,7 +5,7 @@ tags:
 cover: /img/kyoto.JPG
 ---
 
-![东京大学](/img/夕阳东京塔.jpg)
+![东京大学](/img/东京大学.jpg)
 
 ![东京塔](/img/夕阳东京塔.jpg)
 
