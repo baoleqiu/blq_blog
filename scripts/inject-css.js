@@ -35,27 +35,18 @@ hexo.extend.injector.register('head_end', `<style>
   object-fit: cover !important;
 }
 
-/* 内容区域半透明背景 */
-body {
-  background: transparent !important;
-}
-
+/* 内容区域全透明 */
+body,
 #body-wrap,
 .layout,
 #content-inner,
 #recent-posts,
 #post,
 #page,
-#content {
-  background: transparent !important;
-}
-
+#content,
 .recent-post-item,
 .card-widget {
-  background: rgba(255, 255, 255, 0.65) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-  border-radius: 12px !important;
+  background: transparent !important;
 }
 
 /* 灯箱窗口化 */
