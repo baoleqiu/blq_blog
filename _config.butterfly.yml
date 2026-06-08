@@ -20,6 +20,7 @@ nav:
 menu:
   Home: / || fas fa-home
   Archives: /archives/ || fas fa-archive
+  相册: /photos/ || fas fa-images
   # Tags: /tags/ || fas fa-tags
   # Categories: /categories/ || fas fa-folder-open
   # List||fas fa-list:
