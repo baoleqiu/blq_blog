@@ -9,7 +9,7 @@ description: '玻璃球的个人博客'
 keywords: 博客,blog,玻璃球
 author: blq
 language: zh-CN
-timezone: ''
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -43,7 +43,7 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-syntax_highlighter:
+syntax_highlighter: false
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
