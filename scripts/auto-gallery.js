@@ -1,13 +1,12 @@
-const { join } = require('path');
+const fs = require('fs');
+const path = require('path');
 
-hexo.extend.generator.register('auto-gallery', function (locals) {
-  // 获取所有文章
-  const posts = locals.posts.sort('date', -1);
+hexo.on('generateBefore', function () {
+  const posts = hexo.locals.get('posts').sort('date', -1);
 
   // 按年月分组
   const groups = {};
   posts.forEach(post => {
-    // 提取文章中的图片
     const imgRegex = /!\[.*?\]\((\/img\/.+?)\)/g;
     let match;
     const images = [];
@@ -17,43 +16,35 @@ hexo.extend.generator.register('auto-gallery', function (locals) {
 
     if (images.length === 0) return;
 
-    // 按年月分组
     const month = post.date.format('YYYY年M月');
-
-    if (!groups[month]) {
-      groups[month] = [];
-    }
+    if (!groups[month]) groups[month] = [];
 
     images.forEach(img => {
-      // 避免重复图片
       if (!groups[month].find(i => i.url === img)) {
-        groups[month].push({
-          url: img,
-          postTitle: post.title,
-          postPath: post.path
-        });
+        groups[month].push({ url: img, title: post.title });
       }
     });
   });
 
-  // 生成相册页面内容
-  let content = '';
+  // 生成 markdown
+  let md = `---
+title: 相册
+date: 2026-06-08 17:22:24
+type: photos
+---
+
+`;
+
   Object.keys(groups).sort().reverse().forEach(month => {
-    content += `\n## ${month}\n\n{% gallery %}\n`;
+    md += `## ${month}\n\n{% gallery %}\n`;
     groups[month].forEach(img => {
-      content += `![${img.postTitle}](${img.url})\n`;
+      md += `![${img.title}](${img.url})\n`;
     });
-    content += '{% endgallery %}\n';
+    md += '{% endgallery %}\n\n';
   });
 
-  return {
-    path: 'photos/index.html',
-    data: {
-      title: '相册',
-      date: '2026-06-08 17:22:24',
-      type: 'photos',
-      _content: content
-    },
-    layout: ['page', 'post']
-  };
+  // 写入 source/photos/index.md
+  const dir = path.join(hexo.base_dir, 'source', 'photos');
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.md'), md);
 });
