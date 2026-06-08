@@ -35,3 +35,17 @@ hexo.extend.injector.register('head_end', `<style>
   object-fit: cover !important;
 }
 </style>`);
+
+hexo.extend.injector.register('body_end', `<script>
+(function() {
+  // 替换"发表于"为"记录于"
+  var observer = new MutationObserver(function() {
+    document.querySelectorAll('.post-meta-date span, .post-meta-date').forEach(function(el) {
+      if (el.childNodes[0] && el.childNodes[0].nodeType === 3) {
+        el.childNodes[0].textContent = el.childNodes[0].textContent.replace('发表于', '记录于');
+      }
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>`);
