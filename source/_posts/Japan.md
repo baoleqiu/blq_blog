@@ -2,7 +2,7 @@
 title: Japan
 date: 2024-07-12
 categories: 旅行
-tags: [日本, 东京, 京都, 富士山]
+tags:
 cover: /img/kyoto.JPG
 ---
 

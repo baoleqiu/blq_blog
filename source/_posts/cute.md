@@ -2,7 +2,7 @@
 title: cute
 date: 2026-06-08 17:02:50
 categories: 女朋友
-tags: [可爱, 日常]
+tags:
 cover: /img/坐1.jpg
 ---
 
