@@ -3,6 +3,10 @@ title: Japan
 date: 2024-07-12
 categories: 旅行
 tags:
+  - 日本
+  - 旅行
+  - 东京
+  - 富士山
 cover: 
 ---
 
