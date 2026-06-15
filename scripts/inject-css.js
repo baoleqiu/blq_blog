@@ -41,13 +41,6 @@ hexo.extend.injector.register('head_end', `<style>
   opacity: 1 !important;
 }
 
-/* 导航栏始终透明 */
-#page-header.not-top-img #nav,
-#page-header.nav-fixed #nav {
-  background: transparent !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-}
 
 /* 页脚透明 */
 #footer {
