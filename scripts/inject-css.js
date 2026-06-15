@@ -46,6 +46,11 @@ hexo.extend.injector.register('head_end', `<style>
 :root {
   --card-bg: rgba(255, 255, 255, 0.75);
 }
+/* 归档/分类等无顶部图页面，header背景透明 */
+#page-header.not-top-img {
+  background: transparent !important;
+}
+
 /* 页脚透明 */
 #footer {
   background: transparent !important;
