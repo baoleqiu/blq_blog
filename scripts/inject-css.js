@@ -35,6 +35,12 @@ hexo.extend.injector.register('head_end', `<style>
   object-fit: cover !important;
 }
 
+/* 移除背景图淡入动画，立即显示 */
+#web_bg.bg-animation {
+  animation: none !important;
+  opacity: 1 !important;
+}
+
 /* 导航栏始终透明 */
 #page-header.not-top-img #nav,
 #page-header.nav-fixed #nav {
