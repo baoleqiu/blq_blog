@@ -84,19 +84,9 @@ hexo.extend.injector.register('head_end', `<style>
 }
 </style>`);
 
-// APlayer 样式
-hexo.extend.injector.register('head_end', '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">');
-
 hexo.extend.injector.register('body_end', `<script>
-// MetingJS 音乐播放器
 (function() {
-  var script = document.createElement('script');
-  script.src = 'https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js';
-  document.body.appendChild(script);
-})();
-
-// 替换"发表于"为"记录于"
-(function() {
+  // 替换"发表于"为"记录于"
   var observer = new MutationObserver(function() {
     document.querySelectorAll('.post-meta-date span, .post-meta-date').forEach(function(el) {
       if (el.childNodes[0] && el.childNodes[0].nodeType === 3) {
