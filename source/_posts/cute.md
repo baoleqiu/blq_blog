@@ -6,7 +6,7 @@ tags:
   - 女朋友
   - 照片
   - 草地
-cover:
+cover: /img/坐1.jpg
 ---
 
 ![坐在草地看镜头](/img/坐1.jpg)
