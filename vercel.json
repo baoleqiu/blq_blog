@@ -1,0 +1,3 @@
+{
+  "buildCommand": "npx hexo clean && npx hexo generate"
+}
