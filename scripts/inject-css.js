@@ -47,7 +47,9 @@ hexo.extend.injector.register('head_end', `<style>
   --card-bg: rgba(255, 255, 255, 0.78);
 }
 .recent-post-item,
-.card-widget {
+.card-widget,
+#post > * {
+  background: var(--card-bg);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
