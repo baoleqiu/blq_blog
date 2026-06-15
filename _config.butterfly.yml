@@ -73,7 +73,7 @@ default_top_img:
 index_img: /img/violet.jpg
 
 # The banner image of archive page
-archive_img:
+archive_img: transparent
 
 # Note: tag page, not tags page
 tag_img:
