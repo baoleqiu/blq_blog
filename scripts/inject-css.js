@@ -47,6 +47,11 @@ hexo.extend.injector.register('head_end', `<style>
   --card-bg: rgba(255, 255, 255, 0.75);
 }
 
+/* 文章正文字体颜色 */
+#article-container {
+  color: #000;
+}
+
 /* 文章页和透明顶部图页面：header背景透明，标题居中 */
 #page-header.post-bg {
   background: transparent !important;
