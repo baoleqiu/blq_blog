@@ -3,7 +3,7 @@ title: cute
 date: 2026-06-08 17:02:50
 categories: 女朋友
 tags:
-cover: /img/坐1.jpg
+cover:
 ---
 
 ![坐在草地看镜头](/img/坐1.jpg)

@@ -75,7 +75,7 @@ category_generator:
 
 tag_generator:
   per_page: 10
-  enable_index_page: true
+  enable_index_page: false
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta

@@ -3,7 +3,7 @@ title: Japan
 date: 2024-07-12
 categories: 旅行
 tags:
-cover: /img/kyoto.JPG
+cover: 
 ---
 
 ![东京大学](/img/东京大学.jpg)

@@ -1,7 +1,7 @@
 ---
-title: 分类
+title: 标签
 date: 2024-01-01 00:00:00
-type: categories
+type: tags
 layout: page
 top_img: false
 comments: false
