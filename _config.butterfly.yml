@@ -76,7 +76,7 @@ index_img: /img/violet.jpg
 archive_img: transparent
 
 # Note: tag page, not tags page
-tag_img:
+tag_img: false
 
 # The banner image of tag page, you can set the banner image for each tag
 # Format:
