@@ -7,6 +7,7 @@ tags:
   - 旅行
   - 东京
   - 富士山
+top_img: transparent
 cover: /img/东京大学.jpg
 ---
 

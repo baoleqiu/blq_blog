@@ -46,7 +46,11 @@ hexo.extend.injector.register('head_end', `<style>
 :root {
   --card-bg: rgba(255, 255, 255, 0.75);
 }
-/* 透明顶部图页面：标题在header中居中 */
+/* 文章页和透明顶部图页面：header背景透明，标题居中 */
+#page-header.post-bg {
+  background: transparent !important;
+  background-color: transparent !important;
+}
 #page-header.not-home-page #page-site-info {
   top: 50% !important;
   transform: translateY(-50%) !important;
