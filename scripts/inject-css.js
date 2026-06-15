@@ -42,19 +42,6 @@ hexo.extend.injector.register('head_end', `<style>
 }
 
 
-/* 卡片滚动浮现 - 从小到大 */
-.recent-post-item,
-.card-widget {
-  opacity: 0;
-  transform: scale(0.85);
-  transition: opacity 1s ease, transform 1s ease;
-}
-.recent-post-item.visible,
-.card-widget.visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
 /* 卡片半透明 */
 :root {
   --card-bg: rgba(255, 255, 255, 0.75);
@@ -98,23 +85,6 @@ hexo.extend.injector.register('head_end', `<style>
 </style>`);
 
 hexo.extend.injector.register('body_end', `<script>
-// 卡片滚动浮现
-(function() {
-  var io = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.05 });
-  function scan() {
-    document.querySelectorAll('.recent-post-item, .card-widget').forEach(function(el) {
-      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
-      else io.observe(el);
-    });
-  }
-  scan();
-  document.addEventListener('pjax:complete', scan);
-})();
-
 (function() {
   // 替换"发表于"为"记录于"
   var observer = new MutationObserver(function() {
