@@ -9,6 +9,10 @@ top_img: transparent
 cover: /img/Japan/东京大学.jpg
 ---
 
+日本旅行随拍。
+
+<!-- more -->
+
 {% gallery %}
 ![东京大学](/img/Japan/东京大学.jpg)
 
