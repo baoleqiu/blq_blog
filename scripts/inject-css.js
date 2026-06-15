@@ -44,12 +44,12 @@ hexo.extend.injector.register('head_end', `<style>
 
 /* 卡片磨砂效果 */
 :root {
-  --card-bg: rgba(255, 255, 255, 0.72);
+  --card-bg: rgba(255, 255, 255, 0.78);
 }
 .recent-post-item,
 .card-widget {
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 /* 文章页和透明顶部图页面：header背景透明，标题居中 */
 #page-header.post-bg {
