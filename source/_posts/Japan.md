@@ -7,6 +7,7 @@ tags:
   - 旅行
 top_img: transparent
 cover: /img/Japan/东京大学.jpg
+description: 2024年7月1日至12日，拍摄于日本。大二暑假的开头，对我而言难忘的12天。
 ---
 
 2024年7月1日至12日，拍摄于日本。
