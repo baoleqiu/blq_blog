@@ -48,7 +48,7 @@ hexo.extend.injector.register('head_end', `<style>
 #article-container .container {
   opacity: 0;
   transform: scale(0.9);
-  transition: opacity 2s ease, transform 2s ease;
+  transition: opacity 1.2s ease, transform 1.2s ease;
 }
 .recent-post-item.visible,
 .card-widget.visible,
