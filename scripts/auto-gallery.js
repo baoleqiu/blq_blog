@@ -43,6 +43,7 @@ hexo.extend.generator.register('auto-gallery', function (locals) {
     data: {
       title: '相册',
       date: '2026-06-08 17:22:24',
+      top_img: 'transparent',
       content: html
     },
     layout: ['page', 'post']
