@@ -42,6 +42,11 @@ hexo.extend.injector.register('head_end', `<style>
 }
 
 
+/* 音乐播放器层级 */
+.aplayer.aplayer-fixed {
+  z-index: 100 !important;
+}
+
 /* 卡片半透明 */
 :root {
   --card-bg: rgba(255, 255, 255, 0.75);
