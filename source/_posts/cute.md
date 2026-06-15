@@ -5,9 +5,9 @@ categories: 女朋友
 tags:
   - 女朋友
 top_img: transparent
-cover: /img/坐1.jpg
+cover: /img/cute/坐1.jpg
 ---
 
-![坐在草地看镜头](/img/坐1.jpg)
+![坐在草地看镜头](/img/cute/坐1.jpg)
 
-![坐在草地看前方](/img/坐2.jpg)
+![坐在草地看前方](/img/cute/坐2.jpg)
