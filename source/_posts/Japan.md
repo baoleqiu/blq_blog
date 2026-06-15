@@ -13,6 +13,7 @@ cover: /img/Japan/东京大学.jpg
 大二暑假的开头，对我而言难忘的12天。
 
 <!-- more -->
+{% gallery %}
 
 
 ![东京大学](/img/Japan/东京大学.jpg)
@@ -23,3 +24,4 @@ cover: /img/Japan/东京大学.jpg
 
 ![鸭川](/img/Japan/kyoto.JPG)
 
+{% endgallery %}
