@@ -75,15 +75,6 @@ hexo.extend.injector.register('head_end', `<style>
 
 hexo.extend.injector.register('body_end', `<script>
 (function() {
-  // 非首页：清除顶部图片（标签/相册等页面模板误判为home）
-  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
-    var header = document.getElementById('page-header');
-    if (header) {
-      header.style.backgroundImage = 'none';
-      header.style.backgroundColor = 'transparent';
-    }
-  }
-
   // 替换"发表于"为"记录于"
   var observer = new MutationObserver(function() {
     document.querySelectorAll('.post-meta-date span, .post-meta-date').forEach(function(el) {
