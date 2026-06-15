@@ -46,6 +46,9 @@ hexo.extend.injector.register('head_end', `<style>
 :root {
   --card-bg: rgba(255, 255, 255, 0.75);
 }
+[data-theme='dark'] {
+  --card-bg: rgba(18, 18, 18, 0.85);
+}
 
 /* 文章正文字体颜色 */
 #article-container {
