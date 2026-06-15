@@ -42,21 +42,6 @@ hexo.extend.injector.register('head_end', `<style>
 }
 
 
-/* 卡片滚动浮现 */
-.recent-post-item,
-.card-widget,
-#article-container .container {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.recent-post-item.visible,
-.card-widget.visible,
-#article-container .container.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* 卡片半透明 */
 :root {
   --card-bg: rgba(255, 255, 255, 0.75);
@@ -100,38 +85,8 @@ hexo.extend.injector.register('head_end', `<style>
 </style>`);
 
 hexo.extend.injector.register('body_end', `<script>
-// 滚动浮现效果
 (function() {
-  var fadeObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        fadeObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-  function observeCards() {
-    document.querySelectorAll('.recent-post-item, .card-widget, #article-container .container').forEach(function(el) {
-      // 跳过首屏已可见的元素（如个人信息卡片）
-      if (el.getBoundingClientRect().top < window.innerHeight) {
-        el.classList.add('visible');
-        return;
-      }
-      fadeObserver.observe(el);
-    });
-  }
-
-  // 初始观察
-  observeCards();
-
-  // Pjax 切换后重新观察
-  document.addEventListener('pjax:complete', observeCards);
-  document.addEventListener('DOMContentLoaded', observeCards);
-})();
-
-// 替换"发表于"为"记录于"
-(function() {
+  // 替换"发表于"为"记录于"
   var observer = new MutationObserver(function() {
     document.querySelectorAll('.post-meta-date span, .post-meta-date').forEach(function(el) {
       if (el.childNodes[0] && el.childNodes[0].nodeType === 3) {
