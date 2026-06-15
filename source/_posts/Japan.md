@@ -14,7 +14,6 @@ cover: /img/Japan/东京大学.jpg
 
 <!-- more -->
 
-{% gallery %}
 
 ![东京大学](/img/Japan/东京大学.jpg)
 
@@ -24,4 +23,3 @@ cover: /img/Japan/东京大学.jpg
 
 ![鸭川](/img/Japan/kyoto.JPG)
 
-{% endgallery %}
