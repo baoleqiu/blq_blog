@@ -42,6 +42,10 @@ hexo.extend.injector.register('head_end', `<style>
 }
 
 
+/* 卡片半透明 */
+:root {
+  --card-bg: rgba(255, 255, 255, 0.75);
+}
 /* 页脚透明 */
 #footer {
   background: transparent !important;
