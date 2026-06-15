@@ -9,9 +9,12 @@ top_img: transparent
 cover: /img/Japan/东京大学.jpg
 ---
 
-日本旅行随拍。
+2024年7月1日至12日，拍摄于日本。
+大二暑假的开头，对我而言难忘的12天。
 
 <!-- more -->
+
+{% gallery %}
 
 ![东京大学](/img/Japan/东京大学.jpg)
 
@@ -20,3 +23,5 @@ cover: /img/Japan/东京大学.jpg
 ![富士山](/img/Japan/罗森富士山.jpg)
 
 ![鸭川](/img/Japan/kyoto.JPG)
+
+{% endgallery %}
