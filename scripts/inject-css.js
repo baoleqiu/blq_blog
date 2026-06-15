@@ -42,19 +42,19 @@ hexo.extend.injector.register('head_end', `<style>
 }
 
 
-/* 卡片滚动浮现 - 由远及近 */
+/* 卡片滚动浮现 */
 .recent-post-item,
 .card-widget,
 #article-container .container {
   opacity: 0;
-  transform: scale(0.9);
+  transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .recent-post-item.visible,
 .card-widget.visible,
 #article-container .container.visible {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
 }
 
 /* 卡片半透明 */
