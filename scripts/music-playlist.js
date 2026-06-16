@@ -35,6 +35,9 @@ hexo.extend.injector.register('body_end', function () {
 
   if (songs.length === 0) return '';
 
+  // 按文件名排序
+  songs.sort(function(a, b) { return a.url.localeCompare(b.url, 'zh'); });
+
   return '<script>' +
     'window.musicPlaylist=' + JSON.stringify(songs) + ';' +
     'document.addEventListener("DOMContentLoaded",function(){' +
