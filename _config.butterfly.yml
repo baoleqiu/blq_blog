@@ -1056,7 +1056,6 @@ inject:
   bottom:
     - '<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>'
     - '<div id="aplayer" class="no-destroy"></div>'
-    - '<script>document.addEventListener("DOMContentLoaded",function(){var ap=new APlayer({container:document.getElementById("aplayer"),fixed:true,autoplay:false,loop:"all",volume:0.7,audio:[{name:"music",artist:"",url:"https://cropgif.net/audio/1781580923760-b4550b33-088f-4431-9285-27b87cd5eb6d.mp3",cover:""}]});});</script>'
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
