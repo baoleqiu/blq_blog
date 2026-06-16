@@ -2,7 +2,7 @@
 	width: 140px;
 	height: 300px;
 	position: fixed;
-	top: -40px;
+	top: 60px;
 	right: -20px;
 	z-index: 2000;
 	-webkit-transform: scale(0);
